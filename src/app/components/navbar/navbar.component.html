@@ -11,7 +11,9 @@
       <li class="nav-item"> <a class="nav-link" routerLinkActive = "active" [routerLink] = "['protegida']">Protegida</a> </li>
     </ul>
     <span class="navbar-text">
-      Navbar text with an inline element
+      <button type="button" *ngIf="!auth.isAuthenticated()" class="btn btn-outline-primary btn-sm" (click) = "login()">Login</button>
+      <button type="button" *ngIf="auth.isAuthenticated()" class="btn btn-outline-primary btn-sm" (click) = "logout()">Logout</button>
+      <button type="button" class="btn btn-danger btn-sm">Register</button>
     </span>
   </div>
 </nav>
