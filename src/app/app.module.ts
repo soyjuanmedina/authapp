@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app.routes';
 
 //Services
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -28,7 +29,8 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
     AppRoutingModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
