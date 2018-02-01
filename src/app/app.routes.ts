@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PreciosComponent } from './components/precios/precios.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProtegidaComponent } from './components/protegida/protegida.component';
+import { CanActivate } from '@angular/router';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [

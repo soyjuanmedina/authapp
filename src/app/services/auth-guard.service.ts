@@ -14,10 +14,10 @@ export class AuthGuardService implements CanActivate {
   canActivate( next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log(next, state);
     if (this._authService.isAuthenticated()) {
-      console.log('Guar');
+      console.log('Protegida por el Auth-Guard');
       return true;
     } else {
-      console.error('No paso');
+      console.error('Acceso rechazado por el Auth-Guard');
       return false;
     }
   }
