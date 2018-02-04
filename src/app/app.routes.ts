@@ -7,6 +7,7 @@ import { CanActivate } from '@angular/router';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent },
     { path: 'precios', component: PreciosComponent },
     {
