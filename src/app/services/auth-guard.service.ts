@@ -9,7 +9,8 @@ import { AuthService } from './auth.service';
 @Injectable()
 export class AuthGuardService implements CanActivate {
 
-  constructor( private _authService: AuthService ) { }
+  constructor( private _authService: AuthService,
+    public router: Router ) { }
 
   canActivate( next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log(next, state);
@@ -18,6 +19,7 @@ export class AuthGuardService implements CanActivate {
       return true;
     } else {
       console.error('Acceso rechazado por el Auth-Guard');
+      this.router.navigate(['/']);
       return false;
     }
   }
